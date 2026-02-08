@@ -1,0 +1,134 @@
+.schoolna_info,
+.hero {
+  text-align: center;
+  position: relative;
+  z-index: 9;
+  padding-block-start: 60px;
+  background: linear-gradient(84deg, #007593 3.25%, #044d60 96.85%);
+  // transform: translateY(-1px);
+  // height: 100vh;
+  // &::after{
+  //   content: '';
+  //   position: absolute;
+  //   left: 0;
+  //   top: -115px;
+  //   width: 100%;
+  //   height: 110vh;
+  //   z-index: -3;
+  //   background-image: url(../assets/images/schoolna_info_background.png);
+  //   background-repeat: no-repeat;
+  //   background-size: cover;
+  //   background-position: center;
+  //   // background-attachment: fixed;
+  // }
+  background: linear-gradient(84deg, #007593 3.25%, #044d60 96.85%);
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    min-height: 158px;
+    height: fit-content;
+    z-index: -2;
+    background: url("/assets/images/clouds.svg");
+    background-size: cover;
+    background-repeat: repeat-x;
+    background-position: top;
+  }
+  .schoolna_info_content,
+  .schoolna_hero_content,
+  .container {
+    max-width: 992px;
+    
+    .schoolna_header {
+      background: transparent;
+      h1 {
+        text-align: center;
+        font-size: 3.75rem;
+        font-weight: 700;
+        // line-height: 72px;
+        max-width: unset;
+        color: #fff;
+        margin-bottom: 24px;
+      }
+      p {
+        font-weight: 400;
+        text-align: center;
+        color: #e6e8ec;
+        max-width: 790px;
+        margin: 0 auto 8px;
+      }
+      .main-btn.reversed {
+        color: #fff !important;
+        border-color: #fff !important;
+        &:hover {
+          border-color: transparent;
+        }
+      }
+    }
+    .flex_buttons{
+      margin-bottom: 30px ;
+    }
+
+    .schoolna_dashboard_image {
+      // margin-block-start: 50px;
+      transform: translateY(80px);
+      position: relative;
+      filter: drop-shadow(16px 32px 74px rgba(4, 88, 110, 0.08));
+      background: url("/assets/images/schoolna_dashboard_frame.png");
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include displayFlex();
+      // max-height: 656px;
+      min-height: 610px;
+      width: 100%;
+      .portal_image {
+        width: 94%;
+        max-height: 495px;
+        overflow: hidden;
+        margin-block-start: 35px;
+        object-fit: contain;
+      }
+      .rocket_img {
+        position: absolute;
+        bottom: -30px;
+        right: -30px;
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+      }
+      @media (max-width: 991px) {
+        background: transparent;
+        .portal_image {
+          width: 100%;
+          height: 100%;
+          border-radius: 8px;
+          overflow: hidden;
+        }
+      }
+    }
+    @media (max-width: 992px) {
+      max-width: 700px;
+      margin: 0 auto 16px;
+      h1 {
+        font-size: 2.5rem;
+      }
+    }
+    @media (max-width: 567px) {
+      h1 {
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+      p {
+        font-size: clamp(14px, 2.5vw, 20px);
+      }
+      .schoolna_dashboard_image {
+        margin-block-start: 25px;
+      }
+    }
+  }
+  @media (max-width: 567px) {
+    padding-block-start: 40px;
+  }
+}

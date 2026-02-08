@@ -1,0 +1,31 @@
+.schoolna_info_list{
+  margin-block-start: 24px;
+  li{
+    margin-block-start: 12px;
+    font-size: 16px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding-inline-start: 25px; 
+    span{
+      font-weight: 900;
+    }
+    &::before{
+      content: "";
+      position: absolute;
+      inset-inline-start: 0;
+      top: 2px;
+      background-image: url("../images/checkmark.svg");
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+      display: block;
+      margin-inline-end: 8px;
+      @media (max-width : 567px){
+        top: 4px;
+      }
+    }
+  }
+}

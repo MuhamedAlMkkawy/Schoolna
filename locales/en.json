@@ -1,0 +1,243 @@
+{
+  "header": {
+    "navigation": {
+      "home": "Home",
+      "about": "About",
+      "features": "Features",
+      "modules": "Modules",
+      "portals": "Portals",
+      "contactUs": "Contact us"
+    },
+    "buttons": {
+      "getStart": "Get Start"
+    }
+  },
+  "home": {
+    "schoolnaInfo": {
+      "title": "Everything You Need to Manage Your School in One System!",
+      "description": "An integrated system designed to comprehensively manage educational institutions, from exploring subjects and monitoring student progress to handling admissions and processing payments, all from a single, efficient dashboard.",
+      "buttons": {
+        "requestDemo": "Request a Demo",
+        "trial": "Trial"
+      }
+    },
+    "featuresSection": {
+      "badge": "Our Top Features",
+      "title": "Achieve Your Goal With Schoolna",
+      "description": "when an unknown printer took a galley of type and scrambled make specimen book has survived not only five centuries"
+    },
+
+
+    "features": {
+      "studentManagement": {
+        "title": "Student Management",
+        "description": "Keep your student records organized, secure, and always accessible. From admissions to performance tracking—manage it all with confidence"
+      },
+      "timetableScheduling": {
+        "title": "Timetable & Scheduling",
+        "description": "Easily create and manage class schedules, exam timetables, and school events with conflict-free automation."
+      },
+      "performanceTracking": {
+        "title": "Performance Tracking",
+        "description": "Generate real-time reports on academic progress, attendance, and behavior to support data-driven decisions."
+      }
+    },
+
+
+    "getMoreInfo": {
+      "badge": "Get More",
+      "title": "Schedule Management Made Effortless",
+      "description": "Easily create, edit, and assign class schedules for all grades and teachers.The system provides flexible, conflict-free timetables that adapt to sudden changes — with automatic notifications sent to all relevant users.",
+      "buttons": {
+        "requestDemo": "Request a Demo",
+        "seeMore": "See More"
+      }
+    },
+
+    
+    "heroSection": {
+      "title": "Manage Your School Smarter with Schoolna",
+      "description": "Lead the way in educational innovation by providing your students and their parents with a modern, seamless learning experience, from elementary through high school.",
+      "buttons": {
+        "requestDemo": "Request a Demo",
+        "trial": "Trial"
+      }
+    }
+  },
+
+
+  "portalsHeader": {
+    "badgeText": "Personalized Portals for every user:",
+    "title": "Flexible Role Management and Multi-User Access",
+    "text": "Your learning platform supports different user types such as students, teachers, admins, and parents.Each user only sees what’s relevant to them—whether it’s lessons, exams, reports, or performance tracking"
+  },
+
+
+  "clientsHeader": {
+    "badgeText": "Our Clients",
+    "title": "Trusted by Industry Leaders"
+  },
+
+
+  "faqHeader": {
+    "badgeText": "FAQ",
+    "title": "Frequently Asked Questions"
+  },
+
+
+  "schoolnaOffers": {
+    "badgeText": "What Schoolna Offers",
+    "title": "Schoolna … The Future of Education Starts Here"
+  },
+
+
+  "features_page" :{
+    "schoolna_unique_features" : {
+      "unique_features" : {
+        "badgeText": "What sets us apart",
+        "title": "Unique Features to Manage Your School with Intelligence and Efficiency!"
+      }
+    }
+  },
+
+
+  "modules_page" : {
+    "schoolna_modules_hero" : {
+      "badgeText": "Modules",
+      "title": "Everything Your School Needs in One Integrated System",
+      "text": "An organized school, seamless management, and better results.",
+      "demo_button" : "Request a Demo",
+      "trial_button" : "Trial"
+    },
+
+    "schoolna_modules_management" : {
+      "title" : "Manage Your School Smarter with Schoolna",
+      "text" : "Lead the way in educational innovation by providing your students and their parents with a modern, seamless learning experience, from elementary through high school.",
+      "demo_button" : "Request a Demo",
+      "see_more_button" : "Trial"
+    },
+
+    "schoolna_modules_discover" : {
+      "title": "Discover today how Schoolna will transform your school management!",
+      "text": "The text emphasizes that modern technology provides seamless management of all administrative and financial details, contributing to an outstanding learning environment and supporting students’ success and excellence through to graduation.",
+      "demo_button" : "Request a Demo",
+      "trial_button" : "Trial"
+    },
+
+    "schoolna_mockup_hero" : {
+      "title": "Your First Step Towards Smart and Efficient School Management",
+      "text": "With our advanced technologies in Schoolna System, you’ll elevate your management efficiency and make the right decisions at the right time!",
+      "demo_button": "Request a Demo"
+    }
+  },
+
+
+  "contact_page":{
+    "contactSection": {
+      "badgeText": "Contact us",
+      "title": "How would you like to contact Schoolna?",
+      "text": "We are glad to have you around.",
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address"
+    },
+    "form": {
+      "title": "Request a call.",
+      "fullName": "Full Name",
+      "fullNamePlaceholder": "Your Name",
+      "subject": "Subject",
+      "subjectPlaceholder": "Your Subject",
+      "phone": "Phone",
+      "phonePlaceholder": "Your Phone",
+      "email": "Email",
+      "emailPlaceholder": "Your Email",
+      "message": "Message",
+      "button": "Send",
+      "validations": {
+        "fullName": {
+          "required": "Full name is required",
+          "min": "Full name must be at least 2 characters"
+        },
+        "subject": {
+          "required": "Subject is required",
+          "min": "Subject must be at least 5 characters"
+        },
+        "phone": {
+          "required": "Phone number is required",
+          "invalid": "Please enter a valid phone number",
+          "min": "Phone number must be 10 characters"
+        },
+        "email": {
+          "required": "Email is required",
+          "invalid": "Please enter a valid email address"
+        },
+        "message": {
+          "required": "Message is required",
+          "min": "Message must be at least 10 characters"
+        }
+      }
+    },
+    "heroSection": {
+      "title": "Manage Your School Smarter with Schoolna",
+      "text": "Lead the way in educational innovation by providing your students and their parents with a modern, seamless learning experience, from elementary through high school.",
+      "demoButton": "Request a Demo",
+      "trialButton": "Trial"
+    }
+  },
+
+  "footer": {
+    "subscribe": {
+      "badgeText": "international Eduacation",
+      "title": "Subscribe Our Latest News",
+      "text": "Horbi mauris augue, pulvinar quis luctus eget. Phasellus gravida lacus quis eros lobortis, nec dapibus quam gravida. Duis sed augue vitae felis pellentesque varius nec quis nunc.",
+      "placeholder": "Your Email",
+      "button": "Subscribe",
+      "validations": {
+        "email": {
+          "required": "Email is required",
+          "invalid": "Please enter a valid email address"
+        }
+      }
+    },
+    "main": {
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis obcaecati alias pariatur explicabo eos sequi natus praesentium! Voluptatibus debitis voluptas asperiores, ab doloribus mollitia consequatur aliquam, harum porro quam nobis."
+    },
+    "navigation": {
+      "pages": {
+        "title": "Pages",
+        "about": "About",
+        "gallery": "Our Gallery",
+        "events": "Events"
+      },
+      "help": {
+        "title": "Help",
+        "faq": "Faq",
+        "pricing": "Pricing",
+        "blogs": "Blogs"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "termsOfUse": "Terms of Use"
+      }
+    },
+    "copyright": {
+      "text": "Copyright © 2025 by Mazaya. All Rights Reserved.",
+      "privacyPolicy": "Privacy Policy",
+      "cookiesPolicy": "Cookies Policy"
+    }
+  },
+  "login_page" : {
+    "title" : "Login Page",
+    "email" : "Email",
+    "emailPlaceholder" : "Your Email",
+    "submit_button" : "Submit",
+    "validations": {
+      "email": {
+        "required": "Email is required",
+        "invalid": "Please enter a valid email address"
+      }
+    }
+  }
+}

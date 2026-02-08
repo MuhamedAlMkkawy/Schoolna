@@ -1,0 +1,38 @@
+.schoolna_header_badge {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 50px;
+  width: fit-content;
+  background-color: rgba($mainColorRgb, 0.1);
+  color: $mainColor;
+  margin-bottom: 16px;
+  // margin-inline: auto;
+}
+.schoolna_header {
+  h4 {
+    font-size: clamp(20px, 2.5vw, 40px);
+    font-weight: 700;
+    color: $textColor;
+    margin-bottom: 10px;
+  }
+
+  .text {
+    max-width: 650px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #6d6c80;
+  }
+  &.centered {
+    text-align: center;
+    // max-width: 767px;
+    margin: 0 auto 30px;
+    padding-inline: 20px;
+    background: transparent;
+
+    .schoolna_header_badge,
+    .text {
+      margin: 0 auto 16px;
+    }
+  }
+}

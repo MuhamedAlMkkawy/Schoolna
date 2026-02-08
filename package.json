@@ -1,7 +1,7 @@
 {
-  "name": "layla",
-  "type": "module",
+  "name": "nuxt-app",
   "private": true,
+  "type": "module",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -10,23 +10,27 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
-    "@nuxtjs/i18n": "^10.2.1",
-    "@nuxtjs/tailwindcss": "^6.14.0",
-    "@pinia/nuxt": "^0.11.3",
-    "@primeuix/themes": "^1.2.5",
+    "@nuxtjs/i18n": "^9.2.0",
+    "@nuxtjs/tailwindcss": "^6.13.1",
+    "@pinia/nuxt": "^0.10.1",
+    "@primevue/themes": "^4.2.5",
     "@vee-validate/nuxt": "^4.15.1",
-    "nuxt": "^4.2.1",
-    "nuxt-yup": "^2.2.0",
-    "pinia": "^3.0.4",
-    "pinia-plugin-persistedstate": "^4.7.1",
+    "@vee-validate/rules": "^4.15.1",
+    "@vee-validate/yup": "^4.15.1",
+    "nuxt": "^3.15.4",
+    "nuxt-aos": "^1.2.5",
+    "pinia": "^3.0.1",
+    "pinia-plugin-persistedstate": "^4.2.0",
     "primeicons": "^7.0.0",
-    "primevue": "^4.4.1",
-    "vue": "^3.5.24",
-    "vue-router": "^4.6.3"
+    "primevue": "^4.2.5",
+    "vee-validate": "^4.15.1",
+    "vue": "latest",
+    "vue-router": "latest",
+    "vue3-carousel": "^0.16.0",
+    "yup": "^1.7.0"
   },
   "devDependencies": {
-    "@primevue/nuxt-module": "^4.4.1",
-    "sass-embedded": "^1.93.3",
-    "vite-tsconfig-paths": "^5.1.4"
+    "@primevue/nuxt-module": "^4.2.5",
+    "sass-embedded": "^1.89.2"
   }
 }

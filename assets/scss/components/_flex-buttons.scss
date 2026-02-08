@@ -1,0 +1,29 @@
+.flex_buttons{
+  @include displayFlex($align : stretch);
+  // margin-block-start: 24px;
+  // width: 100%;
+  .main-btn{
+    // max-width: 180px;
+    margin-inline: 0;
+    font-size: 16px;
+    // flex-grow: 1;
+    height: 50px;
+    // &.reversed{
+    //   max-width: unset !important;
+    //   margin-bottom: 0;
+    // }
+  }
+  @media (max-width : 567px){
+    .main-btn{
+      font-size: 12px;
+    }
+  }
+  @media (max-width : 400px){
+    flex-wrap: wrap;
+    .main-btn{
+      max-width: 100%;
+      width: 100%;
+      font-size: 14px;
+    }
+  }
+}

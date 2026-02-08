@@ -1,0 +1,230 @@
+.header{
+  background: linear-gradient(84deg, #007593 3.25%, #044d60 96.85%);
+  color: #fff;
+}
+.schoolna_header,
+.header {
+  // background: #333;
+  padding-block: 24px;
+  &.centered{
+    text-align: center;
+  }
+  .schoolna_header_content,
+  .container {
+    @include displayFlex($justify: space-between);
+    position: relative;
+    z-index: 12;
+    .image {
+      max-width: 160px;
+      flex-shrink: 0;
+    }
+    ul.schoolna_header_links {
+      @include displayFlex($gap: 24px);
+      li {
+        border: 1px solid transparent;
+        opacity: 0.7;
+        transition: 0.3s;
+        border-radius: 6px;
+        text-wrap: nowrap;
+        text-transform: capitalize;
+        a {
+          padding: 8px 16px;
+          display: block;
+          font-weight: 400;
+        }
+        &:hover {
+          background: #fff;
+          opacity: 1;
+          color: $mainColor;
+        }
+        &.active {
+          opacity: 1;
+          border-color: #fff;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        gap: 4px;
+      }
+      @media (max-width: 992px) {
+        position: fixed;
+        inset-inline-start: 0;
+        top: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 0 16px;
+        z-index: 999;
+        color: $mainColor;
+        transition: 0.6s;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: start;
+        align-items: flex-start;
+        .image {
+          max-width: 200px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0;
+          inset-inline-start: 0;
+          width: 100%;
+          height: 55%;
+          background: #fff;
+          z-index: -1;
+        }
+
+        .close_mobile_menu {
+          position: absolute;
+          inset-inline-end: 20px;
+          top: 20px;
+          width: 30px;
+          height: 30px;
+          transition: 0.6s;
+          border-radius: 8px;
+          &:hover {
+            background: $mainColor;
+            color: #fff;
+          }
+        }
+
+        ul {
+          padding-block-start: 30px;
+          li {
+            position: relative;
+            padding-block: 8px;
+            color: #6d6c80;
+            a {
+              display: block;
+              width: 100%;
+            }
+            // &:not(:last-of-type){
+            //   // margin-block-end: 20px;
+            // }
+            &.active,
+            &:hover {
+              color: $mainColor;
+              &::before {
+                content: "";
+                position: absolute;
+                inset-inline-start: -25px;
+                top: 0;
+                height: 100%;
+                width: 20px;
+                z-index: 99;
+                border-radius: 8px;
+                background: $mainColor;
+              }
+            }
+          }
+        }
+        &.active {
+          height: 100vh;
+          padding-block: 24px;
+        }
+      }
+    }
+
+    .schoolna_header_buttons {
+      @include displayFlex($gap: clamp(10px, 2.5vw, 24px));
+      .main-btn {
+        font-size: 18px;
+        margin-inline-start: auto;
+        @media (max-width: 567px) {
+          display: none;
+        }
+      }
+      .mobile_menu_controller {
+        display: none;
+        @media (max-width: 992px) {
+          display: flex;
+          padding: 12px 15px;
+          &:hover {
+            i {
+              transform: translate(0);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // + .schoolna_mobile_links {
+  //   position: fixed;
+  //   inset-inline-start: 0;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 0;
+  //   background: rgba(0, 0, 0, 0.3);
+  //   padding: 0 16px;
+  //   z-index: 999;
+  //   color: $mainColor;
+  //   transition: 0.6s;
+  //   overflow: hidden;
+  //   .image {
+  //     max-width: 200px;
+  //   }
+
+  //   &::after {
+  //     content: "";
+  //     position: absolute;
+  //     top: 0;
+  //     inset-inline-start: 0;
+  //     width: 100%;
+  //     height: 55%;
+  //     background: #fff;
+  //     z-index: -1;
+  //   }
+
+  //   .close_mobile_menu {
+  //     position: absolute;
+  //     inset-inline-end: 20px;
+  //     top: 20px;
+  //     width: 30px;
+  //     height: 30px;
+  //     transition: 0.6s;
+  //     border-radius: 8px;
+  //     &:hover {
+  //       background: $mainColor;
+  //       color: #fff;
+  //     }
+  //   }
+
+  //   ul.schoolna_header_links {
+  //     padding-block-start: 30px;
+  //     li {
+  //       position: relative;
+  //       padding-block: 8px;
+  //       color: #6d6c80;
+  //       a {
+  //         display: block;
+  //         width: 100%;
+  //       }
+  //       // &:not(:last-of-type){
+  //       //   // margin-block-end: 20px;
+  //       // }
+  //       &.active,
+  //       &:hover {
+  //         color: $mainColor;
+  //         &::before {
+  //           content: "";
+  //           position: absolute;
+  //           inset-inline-start: -25px;
+  //           top: 0;
+  //           height: 100%;
+  //           width: 20px;
+  //           z-index: 99;
+  //           border-radius: 8px;
+  //           background: $mainColor;
+  //         }
+  //       }
+  //     }
+  //   }
+  //   &.active {
+  //     height: 100vh;
+  //     padding-block: 24px;
+  //   }
+  // }
+}

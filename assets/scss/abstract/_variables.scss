@@ -1,0 +1,46 @@
+:root {
+  --main-color: #28B6BE;
+  --main-color-rgb: 40, 182, 190;
+  --sec-color: #F24646;
+  --sec-color-rgb: 242, 70, 70;
+  // --third-color: #F18A37;
+  // --third-color-rgb: 241, 138, 55);
+  --text-color: #313131;
+  --text-color-rgb: 49, 49, 49;
+
+
+  // ------------------ BOARD VARIABLES ------------------
+  --main-board-color: #3B6DA7;
+  --main-board-color-rgb: 59, 109, 167;
+}
+
+
+
+/* MAIN FONT FAMILY */
+$fontFamily: "Tajawal";
+
+// ========== DEFINE MAIN VARIABLES ==============
+
+// TRANSITIONS WITH DIFFRENT TIMES
+$transition: all 0.5s ease-in-out;
+$transition3: all 0.3s ease-in-out;
+$transition7: all 0.7s ease-in-out;
+
+
+/* MAIN FONT SIZE */
+$fontSize: 16px;
+
+
+/* COLORS VARIABLES */
+$mainColor: var(--main-color);
+$mainColorRgb : var(--main-color-rgb);
+$secColor: var(--sec-color);
+$secColorRgb : var(--sec-color-rgb);
+// $thirdColor: var(--third-color);
+$textColor: var(--text-color);
+$textColorRgb : var(--text-color-rgb);
+
+
+// ------------------ BOARD VARIABLES ------------------
+$mainBoardColor: var(--main-board-color);
+$mainBoardColorRgb : var(--main-board-color-rgb);
