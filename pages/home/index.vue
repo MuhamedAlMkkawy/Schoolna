@@ -1,5 +1,6 @@
 <template>
-  <div class="page home_page">
+
+<div :class="['page', `${getResult?.data?.pages[0]?.name}_page`]">
     <!-- Render all sections dynamically -->
     <template v-if="getResult?.data?.pages[0]?.sections">
       <section
