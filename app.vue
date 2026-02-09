@@ -2,11 +2,11 @@
   <div :style="'direction: ' + availableLocales[0].dir">
     <NuxtLayout>
       <NuxtPage />
-      <VideoPopup 
+      <!-- <VideoPopup 
         v-if="globalStore.showVideoPopup"
         :video="globalStore.videoSrc"
         @handleShowVideoPopup="globalStore.handleShowVideoPopup"
-      />
+      /> -->
     </NuxtLayout>
   </div>
 </template>
