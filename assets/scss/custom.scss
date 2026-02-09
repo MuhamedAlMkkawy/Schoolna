@@ -21,7 +21,6 @@
 
 // home page
 
-
 // SCHOOLNA GET MORE SECTION
 .schoolna_get_more_info {
   position: relative;
@@ -78,7 +77,6 @@ h3.title {
   @media (max-width: 567px) {
     width: 15px;
     height: 15px;
-    flex-shrink: 0;
     padding: 3px;
   }
 }
@@ -92,7 +90,6 @@ h3.title {
 }
 
 // STYLE THE HEADER OF THE FEATURES IN ABOUT PAGE
-
 
 // HANDLE STYLING SCHOOLNA INFO STYLES IN [ PORTALS , FEATURES , BOARD  ] PAGE
 .portals_page,
@@ -285,37 +282,6 @@ h3.title {
   }
 }
 
-// TIME LINE AT BOARD INDEX PAGE
-.p-timeline-event-marker::before {
-  width: 100% !important;
-  height: 100% !important;
-  background: #3b6da7 !important;
-}
-
-.p-timeline-vertical.p-timeline-alternate
-  .p-timeline-event:nth-child(odd)
-  .p-timeline-event-opposite {
-  display: flex;
-  justify-content: flex-end;
-  text-align: start !important;
-}
-
-.p-timeline-event-connector {
-  background: linear-gradient(90deg, #56c5ff 0%, #021748 100%) !important;
-}
-
-@media (max-width: 567px) {
-  .p-timeline-vertical.p-timeline-alternate
-    .p-timeline-event:nth-child(odd)
-    .p-timeline-event-content,
-  .p-timeline-vertical.p-timeline-alternate
-    .p-timeline-event:nth-child(even)
-    .p-timeline-event-content,
-  .p-timeline-event-separator {
-    display: none !important;
-  }
-}
-
 .schoolna_info_item {
   @include displayFlex($justify: space-between);
   .image {
@@ -420,5 +386,36 @@ h3.title {
       margin: 0 auto;
       width: 95%;
     }
+  }
+}
+
+// ######### TIME LINE ###############
+.p-timeline-event-marker::before {
+  width: 100% !important;
+  height: 100% !important;
+  background: #3b6da7 !important;
+}
+
+.p-timeline-vertical.p-timeline-alternate
+  .p-timeline-event:nth-child(odd)
+  .p-timeline-event-opposite {
+  display: flex;
+  justify-content: flex-end;
+  text-align: start !important;
+}
+
+.p-timeline-event-connector {
+  background: linear-gradient(90deg, #56c5ff 0%, #021748 100%) !important;
+}
+
+@media (max-width: 567px) {
+  .p-timeline-vertical.p-timeline-alternate
+    .p-timeline-event:nth-child(odd)
+    .p-timeline-event-content,
+  .p-timeline-vertical.p-timeline-alternate
+    .p-timeline-event:nth-child(even)
+    .p-timeline-event-content,
+  .p-timeline-event-separator {
+    display: none !important;
   }
 }

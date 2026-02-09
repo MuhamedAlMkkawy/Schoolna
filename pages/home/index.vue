@@ -1,6 +1,5 @@
 <template>
-
-<div :class="['page', `${getResult?.data?.pages[0]?.name}_page`]">
+  <div :class="['page', `${getResult?.data?.pages[0]?.name}_page`]">
     <!-- Render all sections dynamically -->
     <template v-if="getResult?.data?.pages[0]?.sections">
       <section
@@ -95,6 +94,164 @@
               v-if="component.type === 'custom-html'"
               v-html="parsedHtml(component?.content?.html)"
             />
+            <!-- ###### CARD SLIDER ###### -->
+            <div
+              v-if="component.type === 'card-slider'"
+              :class="['card_slider', component?.content?.customClasses]"
+            >
+              <Carousel
+                :items-to-show="component?.content?.itemsToShow || 1"
+                :wrap-around="true"
+                :autoplay="component?.content?.autoplay ? 3000 : 0"
+                :transition="800"
+                :snap-align="'start'"
+              >
+                <Slide
+                  v-for="(item, index) in component?.content?.items"
+                  :key="index"
+                >
+                  <NuxtLink class="card_item" :to="$localeRoute(item?.link)">
+                    <div class="image">
+                      <img
+                        :src="item?.file"
+                        :alt="item?.title"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    <div class="card_content">
+                      <h3 v-if="item?.title">
+                        {{ item?.title }}
+                      </h3>
+
+                      <p v-if="item?.text">
+                        {{ item?.text }}
+                      </p>
+                    </div>
+                  </NuxtLink>
+                </Slide>
+              </Carousel>
+            </div>
+            <!-- ###### TIME LINE ###### -->
+            <!-- ###### TIMELINE ###### -->
+            <Timeline
+              v-if="component.type === 'timeline'"
+              :value="component?.content?.items"
+              :class="['timeline_items', component?.content?.customClasses]"
+            >
+              <!-- Opposite Content -->
+              <template #opposite="slotProps">
+                <div
+                  :class="[
+                    'timeline_item',
+                    slotProps.item?.classes,
+                    {
+                      last_board_timeline_item:
+                        slotProps.index ===
+                        component?.content?.items?.length - 1,
+                    },
+                  ]"
+                  :data-aos="
+                    slotProps.index % 2 === 0 ? 'fade-left' : 'fade-right'
+                  "
+                  :data-aos-delay="slotProps.index * 200"
+                >
+                  <!-- Date -->
+                  <small v-if="slotProps.item?.date">
+                    {{ new Date(slotProps.item.date).toLocaleDateString() }}
+                  </small>
+
+                  <!-- Title -->
+                  <h4 v-if="slotProps.item?.title">
+                    {{ slotProps.item.title }}
+                  </h4>
+
+                  <!-- Description -->
+                  <p v-if="slotProps.item?.description">
+                    {{ slotProps.item.description }}
+                  </p>
+                </div>
+              </template>
+
+              <!-- Marker (icon support from backend) -->
+              <template #marker="slotProps">
+                <span class="timeline_marker">
+                  <i
+                    v-if="slotProps.item?.icon"
+                    :class="slotProps.item.icon"
+                  ></i>
+                </span>
+              </template>
+            </Timeline>
+
+            <!-- ###### SOCIAL MEDIA ###### -->
+            <div
+              v-if="component.type === 'social-media'"
+              :class="['social_media', component?.content?.customClasses]"
+            >
+              <a
+                v-for="(item, index) in component?.content?.items"
+                :key="index"
+                :href="item?.link"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social_item"
+                :style="{ color: item?.color }"
+              >
+                <i v-if="item?.icon" :class="item?.icon"></i>
+              </a>
+            </div>
+            <!-- ###### ACCORDION ###### -->
+            <Accordion
+              v-if="component.type === 'accordion'"
+              :class="['cms_accordion', component?.content?.customClasses]"
+            >
+              <AccordionPanel
+                v-for="(item, index) in component?.content?.items"
+                :key="index"
+                :value="index"
+              >
+                <AccordionHeader>
+                  {{ item?.title }}
+                </AccordionHeader>
+
+                <AccordionContent>
+                  <div class="accordion_content">
+                    {{ item?.content }}
+                  </div>
+                </AccordionContent>
+              </AccordionPanel>
+            </Accordion>
+            <!-- ###### TABS ###### -->
+            <Tabs
+              v-if="component.type === 'tabs'"
+              :value="0"
+              :class="['cms_tabs', component?.content?.customClasses]"
+            >
+              <!-- Tab Headers -->
+              <TabList>
+                <Tab
+                  v-for="(item, index) in component?.content?.items"
+                  :key="'tab-' + index"
+                  :value="index"
+                >
+                  {{ item?.title }}
+                </Tab>
+              </TabList>
+
+              <!-- Tab Panels -->
+              <TabPanels>
+                <TabPanel
+                  v-for="(item, index) in component?.content?.items"
+                  :key="'panel-' + index"
+                  :value="index"
+                >
+                  <div class="tab_content">
+                    {{ item?.description }}
+                  </div>
+                </TabPanel>
+              </TabPanels>
+            </Tabs>
           </template>
           <!-- FOR HEADER ONLY -->
           <!-- THE HEADER BUTTONS OF LANG , MOBILE MENU AND CONTACT BUTTON IN HEADER -->
@@ -121,6 +278,18 @@
 </template>
 
 <script setup>
+import "vue3-carousel/carousel.css";
+import { Carousel, Slide, Navigation } from "vue3-carousel";
+import Accordion from "primevue/accordion";
+import AccordionPanel from "primevue/accordionpanel";
+import AccordionHeader from "primevue/accordionheader";
+import AccordionContent from "primevue/accordioncontent";
+import Tabs from "primevue/tabs";
+import TabList from "primevue/tablist";
+import Tab from "primevue/tab";
+import TabPanels from "primevue/tabpanels";
+import TabPanel from "primevue/tabpanel";
+
 const { getMethod, getResult } = useApiMethods();
 const router = useRouter();
 const localeRoute = useLocaleRoute();
