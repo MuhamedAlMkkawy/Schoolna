@@ -1,3 +1,5 @@
+@use "sass:math";
+
 // DISPLAY FLEX MIXIN
 @mixin displayFlex(
   $direction: row,
@@ -40,8 +42,6 @@
   text-wrap: pretty;
 }
 
-
-
 /*
 ---CIRCLE MIXIN
 > $width => width of circle.
@@ -56,3 +56,16 @@
   overflow: hidden;
 }
 
+$step: 5;
+$count: math.div(100, $step);
+
+@for $i from 1 through $count {
+  $value: $i * $step;
+
+  .w-\[#{$value}\%\] {
+    width: $value * 1% !important;
+    max-width: $value * 1% !important;
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
