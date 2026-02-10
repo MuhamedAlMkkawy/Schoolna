@@ -64,7 +64,7 @@ $count: math.div(100, $step);
 
   .w-\[#{$value}\%\] {
     width: $value * 1% !important;
-    max-width: $value * 1% !important;
+    // max-width: $value * 1% !important;
     display: flex !important;
     justify-content: center !important;
     overflow: hidden !important;
