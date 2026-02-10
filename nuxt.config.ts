@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     { path: "~/components/", pathPrefix: false },
 
     // Automatically import components from the 'popup' directory with .vue extension
-    { path: "~/components/popup/", pathPrefix: false, extensions: ["vue"] },
+    // { path: "~/components/popup/", pathPrefix: false, extensions: ["vue"] },
 
     // Automatically import components from the 'popup' directory with .vue extension
     // { path: '~/components/layouts/', pathPrefix: false, extensions: ['vue'] },
@@ -17,7 +17,8 @@ export default defineNuxtConfig({
 
   runtimeConfig: {
     public: {
-      apiBase: "https://cms.roqay.dev/api/",
+      apiBase: "http://127.0.0.1:3000/api/",
+      // apiBase: "https://cms.roqay.dev/api/",
     },
   },
 
