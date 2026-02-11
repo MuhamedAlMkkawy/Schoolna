@@ -56,17 +56,12 @@
   overflow: hidden;
 }
 
-$step: 5;
-$count: math.div(100, $step);
-
-@for $i from 1 through $count {
-  $value: $i * $step;
-
-  .w-\[#{$value}\%\] {
-    width: $value * 1% !important;
-    // max-width: $value * 1% !important;
+@for $i from 1 through 100 {
+  .w-\[#{$i}\%\] {
+    width: #{$i + "%"} !important;
+    max-width: #{$i + "%"} !important;
     display: flex !important;
-    justify-content: center !important;
-    overflow: hidden !important;
+    justify-content: start !important;
+    overflow: hidden;
   }
 }
