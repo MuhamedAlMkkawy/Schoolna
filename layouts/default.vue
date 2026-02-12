@@ -52,7 +52,7 @@ const fetchPage = async () => {
   // Map pageKey according to language
   const slug = routeSlugMap[lang]?.[pageKey] || pageKey;
 
-  console.log("Language:", lang, "Page Key:", pageKey, "Slug:", slug);
+  // console.log("Language:", lang, "Page Key:", pageKey, "Slug:", slug);
 
   await getMethod(
     `projects/6978b20b034e791d598c8d9c?pageName=${slug}`,
